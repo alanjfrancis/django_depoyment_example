@@ -12,7 +12,8 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 def index(request):
     return render(request, 'basic_app/index.html')
-
+    
+#Use the @login_required decorator before any def function where it is requred that the user is logged in first
 @login_required
 def user_logout(request):
     logout(request)
